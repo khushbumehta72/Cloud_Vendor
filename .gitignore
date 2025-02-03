@@ -1,0 +1,59 @@
+# Compiled files
+target/
+*.class
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# IDE & Editor Files
+/.idea/
+/*.iml
+/.vscode/
+/*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build & Dependency Directories
+.mvn/
+!mvn/wrapper/maven-wrapper.jar
+/.gradle/
+/build/
+
+# Spring Boot Properties
+*.properties
+*.yml
+*.yaml
+!src/main/resources/application*.yml
+!src/main/resources/application*.yaml
+
+# Environment & Security Files
+.env
+*.env
+*.key
+*.pem
+*.p12
+*.crt
+*.jks
+secrets/
+
+# Node & Frontend Files (if applicable)
+node_modules/
+dist/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Coverage & Reports
+/coverage/
+/test-output/
+/target/site/
+
+# Generated files
+hs_err_pid*
+*.war
+*.jar
+*.ear
