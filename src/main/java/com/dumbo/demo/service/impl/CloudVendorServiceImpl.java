@@ -1,5 +1,6 @@
 package com.dumbo.demo.service.impl;
 
+import com.dumbo.demo.exception.CloudVendorNotFoundException;
 import com.dumbo.demo.model.CloudVendor;
 import com.dumbo.demo.respository.CloudVendorRepository;
 import com.dumbo.demo.service.CloudVendorService;
@@ -37,6 +38,8 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 
     @Override
     public CloudVendor getCloudVendor(String cloudVendorId) {
+        if(cloudVendorRepository.findById(cloudVendorId).isEmpty())
+            throw new CloudVendorNotFoundException("Requested Cloud Vendor not exist");
        return cloudVendorRepository.findById(cloudVendorId).get();
 
     }
